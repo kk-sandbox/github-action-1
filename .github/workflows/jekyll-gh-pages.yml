@@ -28,15 +28,29 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Installing Doxygen
+        run: |
+          sudo apt-get update && \
+          sudo apt-get install -y --no-install-recommends doxygen graphviz
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
+
+      - name: Building Doxygen
+        run: doxygen docs/doxygen.cfg
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          name: github-pages
+          path: ./__html/doxygen
+
+#      - name: Build with Jekyll
+#        uses: actions/jekyll-build-pages@v1
+#        with:
+#          source: ./
+#          destination: ./_site
 
   # Deployment job
   deploy:
