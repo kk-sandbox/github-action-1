@@ -1,0 +1,71 @@
+ktags (1.1-d) stable; urgency=low
+
+  * Validating Ctags and Gtags dependecies independently
+
+ -- Kirubakaran Shanmugam <kribakarans@gmail.com>  Sun, 19 Feb 2023 17:43:45 +0530
+
+ktags (1.1-c) stable; urgency=low
+
+  * Fixed Ktags file scan issues
+
+ -- Kirubakaran Shanmugam <kribakarans@gmail.com>  Sat, 18 Feb 2023 11:25:10 +0530
+
+ktags (1.1-b) stable; urgency=low
+
+  * Auto initialize Ktags on startup to install aliases and validate required tools
+  * Updated README and help menu
+
+ -- Kirubakaran Shanmugam <kribakarans@gmail.com>  Thu, 26 Jan 2023 13:57:25 +0530
+
+ktags (1.1-a) stable; urgency=low
+
+  * Still observed failure with `dpkg install` due to `postinst` and `postrm` scripts
+    TODO: Need to get to know the proper way to handle the `$SUDO_USER` variable
+  * Removed `postinst` and `postrm` scripts for now and use the workoround
+  * Work around: Implemented the `install` and `uninstall` options to install and
+    uninstall the bash and vim aliases to the local user
+
+ -- Kirubakaran Shanmugam <kribakarans@gmail.com>  Thu, 19 Jan 2023 15:34:33 +0530
+
+ktags (1.1-0) stable; urgency=low
+
+  * Installation failure for the root user has been fixed
+
+ -- Kirubakaran Shanmugam <kribakarans@gmail.com>  Sat, 31 Dec 2022 16:56:25 +0530
+
+ktags (1.0-e) stable; urgency=low
+
+  * Updated file exclude patterns
+  * Debug logs for file enumeration and ctags
+
+ -- Kirubakaran Shanmugam <kribakarans@gmail.com>  Sun, 20 Nov 2022 12:26:11 +0530
+
+ktags (1.0-d) stable; urgency=low
+
+  * Revamped cscope file scanning
+
+ -- Kirubakaran Shanmugam <kribakarans@gmail.com>  Thu, 17 Nov 2022 20:07:55 +0530
+
+ktags (1.0-c) stable; urgency=low
+
+  * Added binary file formats to ignore
+
+ -- Kirubakaran Shanmugam <kribakarans@gmail.com>  Sun, 06 Nov 2022 17:42:10 +0530
+
+ktags (1.0-b) stable; urgency=low
+
+  * Fixed failure to create aliases.
+
+ -- Kirubakaran Shanmugam <kribakarans@gmail.com>  Thu, 03 Nov 2022 23:55:40 +0530
+
+ktags (1.0-a) stable; urgency=low
+
+  * Updated 'htags-server' parameters.
+
+ -- Kirubakaran Shanmugam <kribakarans@gmail.com>  Thu, 03 Nov 2022 11:25:35 +0530
+
+ktags (1.0-0) stable; urgency=low
+
+  * Initial release.
+
+ -- Kirubakaran Shanmugam <kribakarans@gmail.com>  Sun, 30 Oct 2022 21:10:10 +0530
